@@ -60,7 +60,6 @@ body {
   padding-right: 15px;
 
   width: 1200px;
-  /* outline: 2px solid tomato; */
 }
 
 /* Logo  */
@@ -74,11 +73,11 @@ body {
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
-.footer.logo {
-  color: var(--primary-white-color);
-}
 .logo-style {
   color: var(--accent-color);
+}
+.logo.footer {
+  color: var(--primary-white-color);
 }
 
 /* Page-header */
@@ -159,29 +158,21 @@ body {
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.address-icon:hover,
-.address-icon:focus {
+.address-nav .link:hover,
+.address-nav .link:focus {
   color: var(--accent-color);
 }
-
-/* .address-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: teal;
-} */
+.address-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
 .envelope {
   width: 16px;
   height: 11.2px;
-  margin-right: 10px;
-  fill: currentColor;
 }
-
 .mobile {
   width: 10px;
   height: 15px;
-  margin-right: 10px;
-  fill: currentColor;
 }
 
 /* Address footer */
@@ -297,12 +288,14 @@ body {
 }
 
 .work-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+
+  width: 370px;
+  height: 70px;
+
+  margin: 0;
+  padding-top: 27px;
 
   color: var(--primary-white-color);
   background-image: linear-gradient(
@@ -311,14 +304,12 @@ body {
     rgba(47, 48, 58, 0.8)
   );
 
-  width: 370px;
-  height: 70px;
-
-  margin: 0;
-  padding-top: 27px;
-
-  position: absolute;
-  bottom: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /* Our team */
@@ -376,21 +367,7 @@ body {
   color: var(--primary-white-color);
 }
 
-.insta {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-.twitter {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-.fb {
-  height: 20px;
-  fill: currentColor;
-}
-.linkedin {
+.icon-hover {
   width: 20px;
   height: 20px;
   fill: currentColor;
@@ -451,11 +428,11 @@ body {
 }
 
 /* Buttons */
-.button {
+.btn {
   cursor: pointer;
 }
 
-.button.primary {
+.btn.primary {
   min-width: 200px;
   margin: 0;
 
@@ -478,7 +455,7 @@ body {
   width: 24px;
   height: 24px;
 }
-.button.secondary {
+.btn.secondary {
   color: var(--primary-text-color);
   background-color: var(--secondary-background-color);
   font-weight: 700;
@@ -493,38 +470,37 @@ body {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button.secondary:hover,
-.button.secondary:focus {
+.btn.secondary:hover,
+.btn.secondary:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
-.button.order {
+.btn.order {
   padding: 10px 32px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button.order:hover,
-.button.order:focus {
+.btn.order:hover,
+.btn.order:focus {
   color: var(--accent-color);
   background-color: var(--primary-white-color);
 }
 
-button.subscribe {
+.btn.subscribe {
   display: flex;
   align-items: center;
 
   padding: 10px 28px 10px 29px;
 }
 
-.button.send {
+.btn.send {
   padding: 10px 55px;
 }
-.button-position {
+.btn-position {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -555,8 +531,6 @@ footer {
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-}
-.footer-form {
 }
 
 .container.footer {
@@ -946,11 +920,3 @@ label + textarea::placeholder {
 a {
   color: var(--accent-color);
 }
-
-/* "./images/svg-sprite.svg#icon-full-check" */
-/* @keyframes modal-open {
-  0% {
-  }
-  100% {
-  }
-} */
